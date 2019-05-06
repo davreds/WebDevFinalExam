@@ -17,16 +17,7 @@ const todoSchema = new mongoose.Schema({
   }
 })
 
-// todoSchema.pre('save', function(next) {
-//     const todo = this
-//     if( todo.isModified('completed')){
-//         todo.completed = false
-//         next()
-//     } else{
-//         todo.completed = false
-//         next()
-//     }
-// })
+
 const Todo = mongoose.model('Todo', todoSchema)
 
 module.exports = Todo
