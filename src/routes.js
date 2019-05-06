@@ -2,11 +2,11 @@ const express = require('express')
 const router = express.Router()
 const cors = require('cors');
 
-router.all('*', cors())
-
 const users = require('./controllers/users.js')
 const todos = require('./controllers/todos.js')
 const auth = require('./middleware/auth')
+
+router.all('*', cors())
 
 router.get('/users', auth, users.getUser)
 router.post('/users/login', users.login)
