@@ -4,10 +4,10 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
 if ( process.env.NODE_ENV === 'production') {
-  var secret = process.env.SECRET
+    var secret = process.env.secret
 } else {
-  const config = require('../config.js')
-  var secret = config.secret
+    const config = require('../config')
+    var secret = config.secret
 }
 
 const userSchema = new mongoose.Schema({
@@ -51,11 +51,11 @@ const userSchema = new mongoose.Schema({
     virtuals: true
   },
   toJSON: {
-    virtuals: true 
+    virtuals: true
   }
 })
 
-// una relacion entre dos Schemas, no lo guarda, es virtual 
+// una relacion entre dos Schemas, no lo guarda, es virtual
 userSchema.virtual('todos', {
   ref: 'Todo',
   localField: '_id',
@@ -115,11 +115,10 @@ userSchema.pre('save', function(next) {
       return next(error)
     })
   } else {
-    next()  
+    next()
   }
 })
 
 const User = mongoose.model('User', userSchema)
 
 module.exports = User
-

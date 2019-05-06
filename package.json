@@ -1,21 +1,27 @@
 {
-  "name": "mongo",
+  "name": "finalexam",
   "version": "1.0.0",
-  "description": "",
+  "description": "Final exam for the WebDev course",
   "main": "mongo.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "David Rojas",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.2.2",
-    "mongoose": "^5.5.1",
+    "mongoose": "^5.5.6",
     "validator": "^10.11.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "pend"
   }
 }
