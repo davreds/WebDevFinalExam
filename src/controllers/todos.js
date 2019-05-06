@@ -25,7 +25,8 @@ const getTodo = function(req, res) {
 const createTodo = function(req, res){
   // los ... son para copiar todo el req.body
   const todo = new Todo({
-    ...req.body,
+    description: req.body.description,
+    completed: false,
     createdBy: req.user._id
   })
   todo.save().then(function() {

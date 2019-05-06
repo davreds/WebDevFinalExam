@@ -2,7 +2,7 @@
   "name": "finalexam",
   "version": "1.0.0",
   "description": "Final exam for the WebDev course",
-  "main": "mongo.js",
+  "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
